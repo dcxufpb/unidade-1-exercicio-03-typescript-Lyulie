@@ -65,21 +65,27 @@ test('Inscrição estadual vazia', () => {
 test('Exercício 2 - customizado', () => {
 
   // Defina seus próprios valores para as variáveis a seguir
-  cupom.dados.nome_loja = "";
-  cupom.dados.logradouro = "";
-  cupom.dados.numero = 0;
-  cupom.dados.complemento = "";
-  cupom.dados.bairro = "";
-  cupom.dados.municipio = "";
-  cupom.dados.estado = "";
-  cupom.dados.cep = "";
-  cupom.dados.telefone = "";
-  cupom.dados.observacao = "";
-  cupom.dados.cnpj = "";
-  cupom.dados.inscricao_estadual = "";
+  cupom.dados.nome_loja = "Casa do peixe";
+  cupom.dados.logradouro = "Rua das trincheiras";
+  cupom.dados.numero = 44;
+  cupom.dados.complemento = "próximo ao Extra";
+  cupom.dados.bairro = "São Miguel";
+  cupom.dados.municipio = "Pocinhos";
+  cupom.dados.estado = "PB";
+  cupom.dados.cep = "58038-000";
+  cupom.dados.telefone = "(83) 8888-7777";
+  cupom.dados.observacao = "Letreiro vermelho";
+  cupom.dados.cnpj = "42.591.651/0797-34";
+  cupom.dados.inscricao_estadual = "244.898.500.113";
 
   //E atualize o texto esperado abaixo
   expect(cupom.imprime_dados_loja()).toBe(
-    `
+    `Casa do peixe
+Rua das trincheiras, 44 próximo ao Extra
+São Miguel - Pocinhos - PB
+CEP:58038-000 Tel (83) 8888-7777
+Letreiro vermelho
+CNPJ: 42.591.651/0797-34
+IE: 244.898.500.113
 `);
 });
